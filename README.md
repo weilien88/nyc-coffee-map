@@ -1,5 +1,7 @@
 # NYC coffee map
 
+[Open the live coffee map](https://weilien88.github.io/nyc-coffee-map/)
+
 Five New York City cafés on a static Leaflet map with OpenStreetMap tiles. The page is a small demo of checked places. It is not a ranking and it is not a complete list of cafés in the city.
 
 ## Run it locally
@@ -16,13 +18,11 @@ A local server is needed so the page can load `data/cafes.json`.
 
 ## GitHub Pages
 
-The site is the files at the repository root. Publish the `main` branch from `/` (no build step).
-
-Project address, once this public repository has Pages enabled for `main` at `/`:
+GitHub Pages serves this repository’s `main` branch from `/`:
 
 https://weilien88.github.io/nyc-coffee-map/
 
-That address is the planned project-site URL. Treat it as live only after the Pages deployment is actually checked. Styles, script, and café data use relative paths so they resolve under the `/nyc-coffee-map/` subpath.
+Styles, script, and café data use relative paths so they resolve under the `/nyc-coffee-map/` subpath. Local viewing still needs the server command above so `data/cafes.json` can load.
 
 ## Sources
 
