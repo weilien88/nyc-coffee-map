@@ -6,6 +6,7 @@
     <title>NYC coffee map</title>
     <meta name="description" content="A small map of five New York City cafés with addresses and links. Not a ranking.">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+    <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css" integrity="sha256-qx5w1Z7EBGW65+cDDaLzzPKBM/1QLmK9WY7vut/XpzI=" crossorigin="">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -62,9 +63,11 @@
       </section>
     </main>
     <footer>
-      <p>Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors. Locations checked 2026-11-07. Direction links open OpenStreetMap and this page does not draw a route.</p>
+      <p>Basemap: <a href="https://openfreemap.org/">OpenFreeMap</a> &copy; <a href="https://www.openmaptiles.org/">OpenMapTiles</a>. Data from <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors. Locations checked 2026-11-07. Direction links open OpenStreetMap and this page does not draw a route.</p>
     </footer>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js" integrity="sha256-RamwepGJzlYFTGIKlHzPQeKR5YyV6bYVM7dAqqZe5cs=" crossorigin=""></script>
+    <script src="https://unpkg.com/@maplibre/maplibre-gl-leaflet@0.1.4/leaflet-maplibre-gl.js" integrity="sha256-Hmz4yz61/ZCYeaob82o4P7UGyaWy27+rq85lopTdH8s=" crossorigin=""></script>
     <script src="app.js"></script>
   </body>
 </html>

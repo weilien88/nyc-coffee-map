@@ -131,7 +131,7 @@
   }
 
   function startMap(cafes, entries) {
-    if (typeof L === "undefined") {
+    if (typeof L === "undefined" || typeof L.maplibreGL !== "function") {
       mapEl.dataset.mapState = "failed";
       setStatus(
         "The map library did not load. Addresses, café sites, and directions are in the list.",
@@ -140,11 +140,19 @@
       return;
     }
 
+    const cafeIcon = L.divIcon({
+      className: "cafe-pin",
+      iconSize: [18, 18],
+      iconAnchor: [9, 9],
+      popupAnchor: [0, -14]
+    });
+
     try {
       map = L.map(mapEl);
       cafes.forEach((cafe) => {
         if (!Number.isFinite(Number(cafe.lat)) || !Number.isFinite(Number(cafe.lng))) return;
         const marker = L.marker([cafe.lat, cafe.lng], {
+          icon: cafeIcon,
           title: cafe.name,
           keyboard: true,
           alt: cafe.name + ", " + cafe.neighborhood
@@ -172,17 +180,20 @@
         L.latLngBounds(placed.map((cafe) => [cafe.lat, cafe.lng])).pad(0.25)
       );
 
-      const tiles = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        maxZoom: 19,
-        attribution:
-          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-      });
-      tiles.on("tileload", () => {
+      const base = L.maplibreGL({
+        style: "https://tiles.openfreemap.org/styles/positron"
+      }).addTo(map);
+      const gl = base.getMaplibreMap();
+      gl.on("load", () => {
         tileLoads += 1;
-        if (tileLoads === 1) mapEl.dataset.tiles = "ok";
+        mapEl.dataset.tiles = "ok";
+        if (statusEl.classList.contains("is-error")) {
+          setStatus(cafes.length + " cafés. Choose one from the list or the map.");
+        }
       });
-      tiles.on("tileerror", showTileProblem);
-      tiles.addTo(map);
+      gl.on("error", () => {
+        if (tileLoads === 0) showTileProblem();
+      });
       window.setTimeout(showTileProblem, 8000);
 
       mapEl.dataset.mapState = "ready";

@@ -2,7 +2,7 @@
 
 [Open the live coffee map](https://weilien88.github.io/nyc-coffee-map/)
 
-Five New York City cafés on a static Leaflet map with OpenStreetMap tiles. The page is a small demo of checked places. It is not a ranking and it is not a complete list of cafés in the city.
+Five New York City cafés on a static Leaflet map with a quiet light basemap. The page is a small demo of checked places. It is not a ranking and it is not a complete list of cafés in the city.
 
 ## Run it locally
 
@@ -38,6 +38,10 @@ Locations were checked on 2026-11-07 and copied into `data/cafes.json`. The brow
 
 SEY Coffee coordinates are also noted at https://every.coffee/cafe/ny/brooklyn/f-4388/sey-coffee. Devoción — Flatiron coordinates are also noted at https://every.coffee/cafe/ny/new-york/f-7741/devocion.
 
-## Tiles
+## Basemap
 
-Tiles are requested from `https://tile.openstreetmap.org/{z}/{x}/{y}.png` as the map is viewed. The page does not prefetch tiles or ship an offline tile pack. OpenStreetMap attribution stays visible on the map and in the footer. Use follows the [OpenStreetMap tile usage policy](https://operations.osmfoundation.org/policies/tiles/).
+The map draws the [Positron](https://tiles.openfreemap.org/styles/positron) style from [OpenFreeMap](https://openfreemap.org/). It is a light vector basemap: neighborhood names and major roads stay visible, minor street names appear only when zoomed well in, and shop or other point-of-interest labels are omitted. CARTO’s light raster tiles now require an API key, so this page does not use them.
+
+The public OpenFreeMap instance needs no account and no key. Its [terms](https://openfreemap.org/tos/) allow website use, including commercial use, with no view limit. The page requests the style and tiles as you look at the map. It does not prefetch tiles or download an offline pack.
+
+Credit stays on the map and in the footer: [OpenFreeMap](https://openfreemap.org/), [OpenMapTiles](https://www.openmaptiles.org/), and [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors. Direction links still open OpenStreetMap. This page does not draw a route.

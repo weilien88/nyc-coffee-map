@@ -201,7 +201,13 @@ a:hover { text-decoration-thickness: 2px; }
   height: calc(100vh - 11.5rem);
   min-height: 460px;
   border-radius: 18px;
-  background: #d7d0c4;
+  background: #eceae4;
+}
+
+.leaflet-marker-icon.cafe-pin {
+  background: #7a2e1b;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px #fffaf3, 0 0 0 4px rgba(36, 28, 22, 0.72);
 }
 
 .leaflet-control-attribution {
