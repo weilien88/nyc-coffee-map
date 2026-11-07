@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NYC coffee map</title>
+    <meta name="description" content="A small map of five New York City cafés with addresses and links. Not a ranking.">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip" href="#cafe-list">Skip to café list</a>
+    <header class="masthead">
+      <p class="eyebrow">New York City</p>
+      <h1>Coffee map</h1>
+      <p class="lede">Five cafés with published addresses and coordinates. A small demo, not a complete guide or a ranking.</p>
+    </header>
+    <p id="status" class="status" role="status">Loading cafés…</p>
+    <main class="layout">
+      <section class="list-panel" aria-labelledby="list-heading">
+        <h2 id="list-heading">Cafés</h2>
+        <ul id="cafe-list"></ul>
+        <noscript>
+          <p>JavaScript is off, so the map is hidden. These are the same five cafés.</p>
+          <ul class="static-list">
+            <li>
+              <strong>SEY Coffee</strong> — Bushwick, Brooklyn<br>
+              18 Grattan Street, Brooklyn, NY 11206<br>
+              <a href="https://www.seycoffee.com/pages/cafe">Café site</a>
+              <a href="https://www.openstreetmap.org/directions?to=40.7054219%2C-73.9323788">Directions</a>
+            </li>
+            <li>
+              <strong>Devoción — Williamsburg</strong> — Williamsburg, Brooklyn<br>
+              148 Grand Street, Brooklyn, NY 11249<br>
+              <a href="https://www.devocion.com/pages/cafes">Café site</a>
+              <a href="https://www.openstreetmap.org/directions?to=40.71477%2C-73.96222">Directions</a>
+            </li>
+            <li>
+              <strong>La Cabra — SoHo</strong> — SoHo, Manhattan<br>
+              284 Lafayette Street, New York, NY 10012<br>
+              <a href="https://lacabra.com/pages/locations">Café site</a>
+              <a href="https://www.openstreetmap.org/directions?to=40.724315%2C-73.996209">Directions</a>
+            </li>
+            <li>
+              <strong>Everyman Espresso</strong> — East Village, Manhattan<br>
+              136 East 13th Street, New York, NY 10003<br>
+              <a href="http://www.everymanespresso.com/">Café site</a>
+              <a href="https://www.openstreetmap.org/directions?to=40.732773%2C-73.98829">Directions</a>
+            </li>
+            <li>
+              <strong>Devoción — Flatiron</strong> — Flatiron, Manhattan<br>
+              25 East 20th Street, New York, NY 10003<br>
+              <a href="https://www.devocion.com/pages/devocion-cafe-flatiron-district-new-york-ny">Café site</a>
+              <a href="https://www.openstreetmap.org/directions?to=40.7390428%2C-73.9891661">Directions</a>
+            </li>
+          </ul>
+        </noscript>
+      </section>
+      <section class="map-panel">
+        <h2 class="visually-hidden">Map</h2>
+        <div id="map" role="region" aria-label="Map of five New York City cafés"></div>
+      </section>
+    </main>
+    <footer>
+      <p>Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors. Locations checked 2026-11-07. Direction links open OpenStreetMap and this page does not draw a route.</p>
+    </footer>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="app.js"></script>
+  </body>
+</html>

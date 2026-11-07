@@ -1,0 +1,67 @@
+{
+  "checkedDate": "2026-11-07",
+  "cafes": [
+    {
+      "id": "sey",
+      "name": "SEY Coffee",
+      "neighborhood": "Bushwick",
+      "borough": "Brooklyn",
+      "address": "18 Grattan Street, Brooklyn, NY 11206",
+      "lat": 40.7054219,
+      "lng": -73.9323788,
+      "website": "https://www.seycoffee.com/pages/cafe",
+      "note": "SEY serves its own coffee in a bright café space.",
+      "coordinateSource": "https://www.openstreetmap.org/node/2838596351",
+      "coordinateEvidence": "https://every.coffee/cafe/ny/brooklyn/f-4388/sey-coffee"
+    },
+    {
+      "id": "devocion-williamsburg",
+      "name": "Devoción — Williamsburg",
+      "neighborhood": "Williamsburg",
+      "borough": "Brooklyn",
+      "address": "148 Grand Street, Brooklyn, NY 11249",
+      "lat": 40.71477,
+      "lng": -73.96222,
+      "website": "https://www.devocion.com/pages/cafes",
+      "note": "Coffee shop and training lab.",
+      "coordinateSource": "https://www.spota.cafe/cafe/devocion-0q7irs/"
+    },
+    {
+      "id": "la-cabra-soho",
+      "name": "La Cabra — SoHo",
+      "neighborhood": "SoHo",
+      "borough": "Manhattan",
+      "address": "284 Lafayette Street, New York, NY 10012",
+      "lat": 40.724315,
+      "lng": -73.996209,
+      "website": "https://lacabra.com/pages/locations",
+      "note": "Nordic-rooted coffee and baking in SoHo.",
+      "coordinateSource": "https://exa.ai/library/place/pynv30w6sxt"
+    },
+    {
+      "id": "everyman",
+      "name": "Everyman Espresso",
+      "neighborhood": "East Village",
+      "borough": "Manhattan",
+      "address": "136 East 13th Street, New York, NY 10003",
+      "lat": 40.732773,
+      "lng": -73.98829,
+      "website": "http://www.everymanespresso.com/",
+      "note": "An East Village espresso stop on East 13th Street.",
+      "coordinateSource": "https://exa.ai/library/place/lb1wwv5k6wj"
+    },
+    {
+      "id": "devocion-flatiron",
+      "name": "Devoción — Flatiron",
+      "neighborhood": "Flatiron",
+      "borough": "Manhattan",
+      "address": "25 East 20th Street, New York, NY 10003",
+      "lat": 40.7390428,
+      "lng": -73.9891661,
+      "website": "https://www.devocion.com/pages/devocion-cafe-flatiron-district-new-york-ny",
+      "note": "Former artist’s studio with a skylight and living greenery.",
+      "coordinateSource": "https://www.openstreetmap.org/node/9270151458",
+      "coordinateEvidence": "https://every.coffee/cafe/ny/new-york/f-7741/devocion"
+    }
+  ]
+}
